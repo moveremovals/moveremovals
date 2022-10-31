@@ -1,27 +1,33 @@
-let gulp = require('gulp')
-let watch = require('gulp-watch')
-let batch = require('gulp-batch')
-let handlebars = require('gulp-compile-handlebars')
-let rename = require('gulp-rename')
+const gulp = require('gulp')
+const handlebars = require('gulp-compile-handlebars')
+const rename = require('gulp-rename')
+const webp = require('gulp-webp');
 
-gulp.task('build', () => {
-    let templateData = {
-        siteName: 'Move Removals'
-    },
-        options = {
-            batch: ['./src/partials'],
-        }
+const imgWebp = done =>
+    gulp.src(['/var/www/html/src/images/*.jpg'])
+    .pipe(webp())
+    .pipe(gulp.dest('/var/www/html/dist/images'))
+    .on('end', done)
 
-    return gulp.src('src/index.hbs')
-        .pipe(handlebars(templateData, options))
-        .pipe(rename('index.html'))
-        .pipe(gulp.dest('dist'))
-})
+const img = done =>
+    gulp.src(['/var/www/html/src/images/*.jpg'])
+    .pipe(gulp.dest('/var/www/html/dist/images'))
+    .on('end', done)
 
-gulp.task(
-    'watch',
-    () => watch(
-        'src/**/*',
-        batch((events, done) => gulp.start('build', done))
-    )
-)
+const html = done =>
+    gulp.src('/var/www/html/src/*.hbs')
+    .pipe(
+            handlebars(
+                {
+                    siteName: 'Move Removals'
+                },
+                {
+                    batch: ['/var/www/html/src/partials'],
+                }
+            )
+        )
+    .pipe(rename({extname: '.html'}))
+    .pipe(gulp.dest('/var/www/html/dist'))
+    .on('end', done)
+
+exports.build = gulp.parallel(html, img, imgWebp)
