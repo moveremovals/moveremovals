@@ -1,7 +1,8 @@
 const gulp = require('gulp')
 const handlebars = require('gulp-compile-handlebars')
 const rename = require('gulp-rename')
-const webp = require('gulp-webp');
+const webp = require('gulp-webp')
+const cleanCSS = require('gulp-clean-css');
 
 const imgWebp = done =>
     gulp.src(['/var/www/html/src/images/*.jpg'])
@@ -30,4 +31,13 @@ const html = done =>
     .pipe(gulp.dest('/var/www/html/dist'))
     .on('end', done)
 
-exports.build = gulp.parallel(html, img, imgWebp)
+const css = done =>
+    gulp.src('/var/www/html/src/*.css')
+    .pipe(cleanCSS({ debug: true }, (details) => {
+        console.log(`${details.name}: ${details.stats.originalSize}`)
+        console.log(`${details.name}: ${details.stats.minifiedSize}`)
+    }))
+    .pipe(gulp.dest('/var/www/html/dist'))
+    .on('end', done)
+
+exports.build = gulp.parallel(html, css, img, imgWebp)
