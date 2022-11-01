@@ -116,7 +116,7 @@ a {
     height: calc(100vh - 100px);
     width: 100%;
     background-color: gray;
-    background-image: url('/images/van.jpg');
+    background-image: url('../images/van.jpg');
     background-size: cover;
 }
 #navContainer {
