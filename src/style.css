@@ -144,6 +144,9 @@ nav a {
     text-align: center;
     cursor: pointer;
 }
+nav a.active {
+    background-color: #DDD;
+}
 nav a:hover {
     background-color: var(--light);
 }

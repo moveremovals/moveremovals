@@ -24,6 +24,9 @@ const html = done =>
                 },
                 {
                     batch: ['/var/www/html/src/partials'],
+                    helpers: {
+                        if_eq: (a, b, opts) => a == b ? opts.fn(this) : opts.inverse(this)
+                    }
                 }
             )
         )
