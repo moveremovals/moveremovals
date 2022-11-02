@@ -8,11 +8,9 @@
             <div></div>
         </label>
 
-        <a href="/" class="{{#if_eq navItem 'about'}}active{{/if_eq}}">About</a>
-        <a href="/CommercialServices" class="{{#if_eq navItem 'commercial'}}active{{/if_eq}}">Commercial Services</a>
-        <a href="/CourierServices" class="{{#if_eq navItem 'courier'}}active{{/if_eq}}">Courier Services</a>
-        <a href="/Quote" class="{{#if_eq navItem 'quote'}}active{{/if_eq}}">Get a Quote</a>
-        <a href="/Contact" class="{{#if_eq navItem 'contact'}}active{{/if_eq}}">Contact</a>
+        {{#each navItems as |value navPath|}}
+            <a href="{{navPath}}" class="{{#if_eq @navPath ../currentPath}}active{{/if_eq}}">{{value}}</a>
+        {{/each}}
 
     </nav>
 </div>

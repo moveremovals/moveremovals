@@ -20,7 +20,15 @@ const html = done =>
     .pipe(
             handlebars(
                 {
-                    siteName: 'Move Removals'
+                    siteName: 'Move Removals',
+                    navItems: {
+                        '/': 'About',
+                        '/CommercialServices': 'Commercial Services',
+                        '/CourierServices': 'Courier Services',
+                        '/Quote': 'Get a Quote',
+                        '/Contact': 'Contact Us',
+
+                    }
                 },
                 {
                     batch: ['/var/www/html/src/partials'],
