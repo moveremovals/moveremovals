@@ -13,17 +13,19 @@ html {
     box-sizing: inherit;
 }
 :root {
-    --primary: #7e1a1a;
+    --primary: #ca1818;
     --secondary: #dbdbdb;
     --dark: rgb(16, 16, 16);
     --light: #FFFFFF;
 }
 body {
     font-family: 'Courier New', monospace;
+    background-color: rgb(0,116,84);
+    background: linear-gradient(120deg, rgba(0,116,84,1) 0%, rgba(0,149,100,1) 45%, rgba(0,140,73,1) 100%);
 }
-#logo {
-    max-width: 180px;
-    padding-left: 1rem;
+#title {
+    color: var(--primary);
+    text-shadow: 2px 2px #00000055;
 }
 .flex-row {
     display: flex;
@@ -55,6 +57,9 @@ body {
 .fc-dark {
     color: var(--dark);
 }
+.fc-primary {
+    color: var(--primary);
+}
 h1 {
     font-size: 1.2rem;
     line-height: 90%;
@@ -74,6 +79,10 @@ h3 {
 .p-1 {
     padding: 1rem;
 }
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 .m-auto {
     margin: auto;
 }
@@ -84,8 +93,14 @@ h3 {
 .mt-1 {
     margin-top: 1rem;
 }
+.mt-2 {
+    margin-top: 2rem;
+}
 .mb-1 {
     margin-bottom: 1rem;
+}
+.mb-auto {
+    margin-bottom: auto;
 }
 body {
     font-family: "Noto Sans", sans-serif;
@@ -94,7 +109,14 @@ body {
 header {
     align-items: center;
     z-index: 2;
-    background-color: #fff;
+}
+#logo {
+    max-height: 100px;
+    margin: auto;
+    display: block;
+}
+#heroImg {
+    display: none;
 }
 .container {
     min-width: 360px;
@@ -108,21 +130,15 @@ header {
 }
 a {
     display: block;
-    color: var(--primary);
+    color: #FFF;
     text-decoration: none;
 }
-#heroImg {
-    position: fixed;
-    height: calc(100vh - 100px);
-    width: 100%;
-    background-color: gray;
-    background-image: url('../images/van.jpg');
-    background-size: cover;
+a:hover {
+    color: var(--primary);
 }
 #navContainer {
     z-index: 3;
-    background-color: gray;
-    height: 50px;
+    height: 100%;
 }
 nav {
     transition: height ease-in-out 0.3s;
@@ -131,7 +147,7 @@ nav {
     overflow: hidden;
     justify-content: start;
     align-items: center;
-    background-color: #EEE;
+    width: 100%;
 }
 nav a {
     height: 100%;
@@ -143,23 +159,21 @@ nav a {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #00000055;
 }
 nav a.active {
-    background-color: #DDD;
-}
-nav a:hover {
-    background-color: var(--light);
+    color: #999;
 }
 main {
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.7);
 }
 #menuButton {
     min-height: 50px;
     cursor: pointer;
 }
 #menuButton div {
-    background-color: var(--dark);
+    background-color: #FFF;
     height: 5px;
     width: 30px;
     margin: 3px 0px;
@@ -185,9 +199,12 @@ main {
     display: none;
 }
 main article {
-    transition: opacity 0.2s ease-in-out;
-    opacity: 0;
-    position: absolute;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #003224;
+}
+#logoLarge {
+    display: none;
 }
 
 @media only screen and (min-width: 600px) {
@@ -222,5 +239,25 @@ main article {
     }
     nav {
         height: 50px;
+    }
+    #logo {
+        display: none;
+    }
+    #heroImg {
+        display: block;
+        width: calc(50% - 2rem);
+        height: auto;
+        object-fit: contain;
+        padding: 1rem;
+        max-width: 500px;
+        max-height: 500px;
+    }
+    #logoLarge {
+        width: calc(50% - 2rem);
+        height: calc(50% - 2rem);
+        max-width: 500px;
+        max-height: 500px;
+        padding: 1rem;
+        display: block;
     }
 }

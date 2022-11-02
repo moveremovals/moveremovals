@@ -5,18 +5,18 @@ const webp = require('gulp-webp')
 const cleanCSS = require('gulp-clean-css');
 
 const imgWebp = done =>
-    gulp.src(['/var/www/html/src/images/*.jpg'])
+    gulp.src(['src/images/*.jpg', 'src/images/*.png'])
     .pipe(webp())
-    .pipe(gulp.dest('/var/www/html/dist/images'))
+    .pipe(gulp.dest('dist/images'))
     .on('end', done)
 
 const img = done =>
-    gulp.src(['/var/www/html/src/images/*.jpg'])
-    .pipe(gulp.dest('/var/www/html/dist/images'))
+    gulp.src(['src/images/*.jpg', 'src/images/*.png'])
+    .pipe(gulp.dest('dist/images'))
     .on('end', done)
 
 const html = done =>
-    gulp.src('/var/www/html/src/*.hbs')
+    gulp.src('src/*.hbs')
     .pipe(
             handlebars(
                 {
@@ -31,7 +31,7 @@ const html = done =>
                     }
                 },
                 {
-                    batch: ['/var/www/html/src/partials'],
+                    batch: ['src/partials'],
                     helpers: {
                         if_eq: (a, b, opts) => a == b ? opts.fn(this) : opts.inverse(this)
                     }
@@ -39,16 +39,16 @@ const html = done =>
             )
         )
     .pipe(rename({extname: '.html'}))
-    .pipe(gulp.dest('/var/www/html/dist'))
+    .pipe(gulp.dest('dist'))
     .on('end', done)
 
 const css = done =>
-    gulp.src('/var/www/html/src/*.css')
+    gulp.src('src/*.css')
     .pipe(cleanCSS({ debug: true }, (details) => {
         console.log(`${details.name}: ${details.stats.originalSize}`)
         console.log(`${details.name}: ${details.stats.minifiedSize}`)
     }))
-    .pipe(gulp.dest('/var/www/html/dist'))
+    .pipe(gulp.dest('dist'))
     .on('end', done)
 
 exports.build = gulp.parallel(html, css, img, imgWebp)
