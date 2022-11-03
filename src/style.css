@@ -147,13 +147,17 @@ a:hover {
     height: 100%;
 }
 nav {
-    transition: height ease-in-out 0.3s;
+    transition: background-color 0.3s ease-out 0.3s, height ease-in-out 0.3s;
     height: 50px;
     flex-direction: column;
     overflow: hidden;
     justify-content: start;
     align-items: center;
     width: 100%;
+    position: absolute;
+}
+main {
+    margin-top: 50px;
 }
 nav a {
     height: 100%;
@@ -185,6 +189,8 @@ nav a.active {
 }
 #menuToggle:checked ~ nav {
     height: 400px;
+    background-color: var(--green);
+    transition: background-color 0s, height ease-in-out 0.3s;
 }
 #menuToggle:checked ~ nav #menuButton div {
     background-color: var(--primary);
@@ -234,6 +240,9 @@ footer a:hover {
     color: var(--green);
 }
 @media only screen and (min-width: 600px) {
+    nav {
+        position: relative;
+    }
     .md-flex-row {
         display: flex;
         flex-direction: row;
@@ -263,9 +272,6 @@ footer a:hover {
         display: none;
     }
     #menuToggle:checked ~ nav {
-        height: 50px;
-    }
-    nav {
         height: 50px;
     }
     #logo {
