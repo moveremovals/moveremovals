@@ -13,19 +13,16 @@ html {
     box-sizing: inherit;
 }
 :root {
-    --primary: #ca1818;
+    --primary: #ff2424;
     --secondary: #dbdbdb;
     --dark: rgb(16, 16, 16);
     --light: #FFFFFF;
+    --green: rgb(0,116,84);
 }
 body {
     font-family: 'Courier New', monospace;
-    background-color: rgb(0,116,84);
+    background-color: var(--green);
     background: linear-gradient(120deg, rgba(0,116,84,1) 0%, rgba(0,149,100,1) 45%, rgba(0,140,73,1) 100%);
-}
-#title {
-    color: var(--primary);
-    text-shadow: 2px 2px #00000055;
 }
 .flex-row {
     display: flex;
@@ -51,6 +48,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.items-center {
+    align-items: center;
+}
 .fc-light {
     color: var(--light);
 }
@@ -66,9 +66,14 @@ h1 {
 }
 h2 {
     font-size: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
 }
 h3 {
     font-size: 0.75rem;
+}
+.text-bracket {
+    font-size: 1.5rem;
 }
 .w-100 {
     width: 100%;
@@ -128,13 +133,17 @@ header {
 .space-around {
     justify-content: space-around;
 }
+.justify-space-between {
+    justify-content: space-between;
+}
 a {
     display: block;
     color: #FFF;
     text-decoration: none;
+    font-weight: bold;
 }
 a:hover {
-    color: var(--primary);
+    color: var(--dark);
 }
 #navContainer {
     z-index: 3;
@@ -160,10 +169,9 @@ nav a {
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
-    text-shadow: 1px 1px #00000055;
 }
 nav a.active {
-    color: #999;
+    color: var(--primary);
 }
 main {
     z-index: 2;
@@ -201,7 +209,7 @@ main {
 main article {
     padding: 1rem;
     font-size: 1rem;
-    background-color: #003224;
+    background-color: #0000007d;
 }
 #logoLarge {
     display: none;
@@ -209,12 +217,31 @@ main article {
 picture img {
     width: 100%;
 }
+#areaList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 380px;
+    margin: auto;
+    padding: 0px;
+}
+#areaList li {
+    display: block;
+    width: 50%;
+    text-align: center;
+}
+footer {
+    background-color: var(--dark);
+}
+footer a:hover {
+    color: var(--green);
+}
 @media only screen and (min-width: 600px) {
     .md-flex-row {
         display: flex;
         flex-direction: row;
     }
-    .md-space-between {
+    .md-justify-space-between {
         justify-content: space-between;
     }
     h1 {
@@ -250,7 +277,6 @@ picture img {
         width: calc(50% - 2rem);
         height: auto;
         object-fit: contain;
-        padding: 1rem;
         max-width: 500px;
         max-height: 500px;
     }
@@ -259,7 +285,12 @@ picture img {
         height: calc(50% - 2rem);
         max-width: 500px;
         max-height: 500px;
-        padding: 1rem;
         display: block;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .lg-justify-center {
+        justify-content: center;
     }
 }
