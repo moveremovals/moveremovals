@@ -47,8 +47,11 @@
             <img id="logoLarge" src="/images/move_logo.png" title="Move Removals" />
 
 
-    <img id="heroImg" src="/images/van.jpg" title="Move Removals" loading="lazy"/>
-
+    <picture id="heroImg">
+        <source srcset="/images/van.webp" type="image/webp">
+        <source srcset="/images/van.jpg" type="image/jpeg">
+        <img title="Move Removals" src="/images/van.jpg" loading="lazy" alt="A smart looking van moves efficiently from left to right">
+    </picture>
     <article class="w-100 mb-auto">
         <p>Move Removals are the premier removals and courier service in Greater Manchester. If you've got something that needs shifting from one place to another, we've got the skills and the van to facilitate that at very reasonable prices.
         <p>No load is too big or small for us and we're very careful.</p>
