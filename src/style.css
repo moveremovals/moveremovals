@@ -296,6 +296,9 @@ footer a:hover {
         max-height: 500px;
         display: block;
     }
+    main {
+        margin-top: 0;
+    }
 }
 
 @media only screen and (min-width: 850px) {
