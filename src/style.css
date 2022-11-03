@@ -214,6 +214,9 @@ main article {
     background-color: #0000007d;
     border-radius: 1rem;
 }
+p {
+    margin: 0.5rem;
+}
 #logoLarge {
     display: none;
 }
