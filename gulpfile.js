@@ -20,6 +20,7 @@ const html = done =>
     .pipe(
             handlebars(
                 {
+                    version: Date.now(),
                     siteName: 'Move Removals',
                     navItems: {
                         '/': 'About',
