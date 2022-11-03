@@ -20,9 +20,9 @@ html {
     --green: rgb(0,116,84);
 }
 body {
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier New';
     background-color: var(--green);
-    background: linear-gradient(120deg, rgba(0,116,84,1) 0%, rgba(0,149,100,1) 45%, rgba(0,140,73,1) 100%);
+    background: linear-gradient(90deg, rgba(0,116,84,1) 0%, rgba(0,149,100,1) 45%, rgba(0,140,73,1) 100%);
 }
 .flex-row {
     display: flex;
@@ -67,7 +67,8 @@ h1 {
 h2 {
     font-size: 1rem;
     text-align: center;
-    padding-bottom: 1rem;
+    background-color: #10101066;
+    padding: 0.5rem 0;
 }
 h3 {
     font-size: 0.75rem;
@@ -107,10 +108,6 @@ h3 {
 .mb-auto {
     margin-bottom: auto;
 }
-body {
-    font-family: "Noto Sans", sans-serif;
-    background-color: #fff;
-}
 header {
     align-items: center;
     z-index: 2;
@@ -125,7 +122,7 @@ header {
 }
 .container {
     min-width: 360px;
-    max-width: 1750px;
+    max-width: 1450px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5rem;
@@ -173,9 +170,6 @@ nav a {
 nav a.active {
     color: var(--primary);
 }
-main {
-    z-index: 2;
-}
 #menuButton {
     min-height: 50px;
     cursor: pointer;
@@ -207,7 +201,8 @@ main {
     display: none;
 }
 main article {
-    padding: 1rem;
+    padding: 0 1rem;
+    padding-bottom: 1rem;
     font-size: 1rem;
     background-color: #0000007d;
 }
@@ -259,7 +254,9 @@ footer a:hover {
     .md-m-1{
         margin: 1rem;
     }
-
+    .md-mt-2 {
+        margin-top: 2rem;
+    }
     #menuButton {
         display: none;
     }
