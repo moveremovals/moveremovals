@@ -52,4 +52,10 @@ const css = done =>
     .pipe(gulp.dest('dist'))
     .on('end', done)
 
+const watchHbs = done => gulp.watch(['src/*.hbs'], html)
+
+const watchCss = done => gulp.watch(['src/*.css'], css)
+
 exports.build = gulp.parallel(html, css, img, imgWebp)
+
+exports.watch = gulp.parallel(watchHbs, watchCss)

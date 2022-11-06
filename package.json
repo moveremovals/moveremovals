@@ -4,7 +4,8 @@
   "description": "Static website for Move Removals Ltd",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
