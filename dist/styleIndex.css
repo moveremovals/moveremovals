@@ -1,1 +1,1 @@
-#navContainer{width:100%}@media only screen and (min-width:600px){#logo{display:none}#heroImg{display:block;width:calc(50% - 2rem);height:auto;object-fit:contain;max-width:500px;max-height:500px}#heroImg img{border-radius:1rem;opacity:.9}#logoLarge{width:calc(50% - 2rem);height:calc(50% - 2rem);max-width:500px;max-height:500px;display:block}}
+@media only screen and (min-width:600px){#heroImg{position:relative;display:block;width:100%;margin:auto;height:auto;object-fit:contain;max-width:1000px}#heroImg img{border-radius:1rem}}

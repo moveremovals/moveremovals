@@ -23,12 +23,13 @@ const html = done =>
                     version: Date.now(),
                     siteName: 'Move Removals',
                     navItems: {
-                        '/': 'About',
-                        '/CommercialServices': 'Commercial Services',
-                        '/CourierServices': 'Courier Services',
-                        '/Quote': 'Get a Quote',
+                        '/': 'Home',
+                        '/ResidentialMove': 'Residential Move',
+                        '/CommercialMove': 'Commercial Move',
+                        '/Pack&Wrap': 'Pack&nbsp;/&nbsp;Wrap&nbsp;& Dismantling',
+                        '/Storage' : 'Storage',
+                        '/Quote': 'Online Quote',
                         '/Contact': 'Contact Us',
-
                     }
                 },
                 {
@@ -52,7 +53,7 @@ const css = done =>
     .pipe(gulp.dest('dist'))
     .on('end', done)
 
-const watchHbs = done => gulp.watch(['src/*.hbs'], html)
+const watchHbs = done => gulp.watch(['src/*.hbs', 'src/**/*.hbs'], html)
 
 const watchCss = done => gulp.watch(['src/*.css'], css)
 

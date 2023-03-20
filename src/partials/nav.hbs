@@ -1,7 +1,7 @@
-<div class="md-mt-2" id="navContainer">
+<div class="md-flex-row md-flex-wrap center md-justify-space-between" id="navContainer">
 
     <input type="checkbox" id="menuToggle" class="d-none">
-    <nav class="container flex-col md-flex-row justify-center">
+    <nav class="flex-col md-flex-row justify-center">
         <label id="menuButton" for="menuToggle" class="flex-col center">
             <div></div>
             <div></div>
@@ -9,7 +9,7 @@
         </label>
 
         {{#each navItems as |value navPath|}}
-            <a href="{{navPath}}" class="{{#if_eq @navPath ../currentPath}}active{{/if_eq}}">{{value}}</a>
+            <a href="{{navPath}}" class="{{#if_eq @navPath ../currentPath}}active{{/if_eq}}">{{{value}}}</a>
         {{/each}}
 
     </nav>
