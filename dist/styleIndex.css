@@ -1,1 +1,1 @@
-@media only screen and (min-width:600px){#heroImg{position:relative;display:block;width:100%;margin:auto;height:auto;object-fit:contain;max-width:1000px}#heroImg img{border-radius:1rem}}
+#heroImg{position:relative;display:block;width:100%;margin:auto}#heroImg img{border-radius:1rem;max-height:350px;object-fit:cover}
