@@ -14,7 +14,7 @@
 
         <div id="quickQuoteBtnWrapperOuter">
             <div id="quickQuoteBtnWrapperInner">
-                <button id="quickQuoteBtn">GET A QUICK QUOTE</button>
+                <button id="quickQuoteBtn" class="modal-btn" data-modal-target="#quickQuoteModal">GET A QUICK QUOTE</button>
             </div>
         </div>
     </div>
@@ -49,13 +49,15 @@
 
 {{#*inline "page-body"}}
     <div id="quickQuoteModal" class="modal">
-        <span class="close-modal">X</span>
+        <span class="modal-closer" data-modal-target="#quickQuoteModal">X</span>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerxT6JvezhgzFHgOw-0ModTjtbOyWp0u9YdqfRrgKg_CsMeA/viewform?embedded=true"
             width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0"
         >
             Loading…
         </iframe>
     </div>
+
+    <script src="scripts/modals.js"></script>
 {{/inline}}
 
 {{/base}}
