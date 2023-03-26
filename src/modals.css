@@ -9,18 +9,26 @@
 }
 .modal {
     display: none;
-    padding-top: 4rem;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    background-color: var(--green);
+    background-color: #007454e0;
     z-index: 10;
     top: 0;
     bottom: 0;
-    height: fit-content;
+    height: 100vh;
 }
 .modal.show {
     display: flex;
 }
 .modal > * {
     margin: auto;
+}
+body.modal-showing {
+    max-height: 100vh;
+    overflow: hidden;
+}
+.modal-closer-btn {
+    margin: auto;
+    display: block;
+    margin-top: 1rem;
 }
