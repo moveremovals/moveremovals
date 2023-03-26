@@ -10,9 +10,13 @@
         <meta name="description" content="Move Removals">
         <title>Move Removals - Contact Us</title>
 
-        <link rel="stylesheet" href="style.css?v=1679827353597">
+        <link rel="stylesheet" href="style.css?v=1679833052965">
 
         
+    <link rel="stylesheet" href="styleHero.css?v=1679833052965">
+    <link rel="stylesheet" href="modals.css?v=1679833052965">
+
+
 
     </head>
 
@@ -61,24 +65,29 @@
             <main class="p-1 fc-light container mx-auto w-100 flex-grow flex-row flex-wrap items-center justify-space-between lg-justify-center">
 
                 
-<article class="w-100 mb-auto">
+    <div id="heroSpace">
+        <picture  id="heroImg" >
+            <source srcset="/images/van.webp" type="image/webp">
+            <source srcset="/images/van.jpg" type="image/jpeg">
+            <img title="Move Removals" src="/images/van.jpg" loading="lazy" alt="A smart looking van moves efficiently from left to right">
+        </picture>
+        <div id="heroBtnWrapperOuter">
+            <div id="heroBtnWrapperInner">
+                <button id="heroBtn" class="modal-btn" data-modal-target="#requestCallback">Request A Callback</button>
+            </div>
+        </div>
+    </div>
 
-<h2 class="fc-primary"><span class="text-bracket" aria-hidden="true">&raquo;</span> Contact Us <span class="text-bracket" aria-hidden="true">&raquo;</span></h2>
+    <article class="w-100 mb-auto">
 
-<p>
-    For all enquiries, give us a call on: <a class="px-1" href="tel:01613303300">0161 330 3300</a>, email <a class="px-1" href="mailto:enquiries@moveremovals.co.uk"> enquiries@moveremovals.co.uk</a>
-    or fill out the form below and we'll get back to you.
-</p>
+        <h2 class="fc-primary"><span class="text-bracket" aria-hidden="true">&raquo;</span> Contact Us <span class="text-bracket" aria-hidden="true">&raquo;</span></h2>
 
-<iframe
-    id="quoteFormFrame"
-    class="w-100"
-    src="https://docs.google.com/forms/d/e/1FAIpQLSehn5ho-MbDcSJtzaMDkTSYFVWcNcanx116oXeVJu4cVcF-tw/viewform?embedded=true"
-    width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">
-    Loading…
-</iframe>
+        <p>
+            For all enquiries, give us a call on: <a class="px-1" href="tel:01613303300">0161 330 3300</a>, email <a class="px-1" href="mailto:enquiries@moveremovals.co.uk"> enquiries@moveremovals.co.uk</a>
+            or fill out the form below and we'll get back to you.
+        </p>
 
-</article>
+    </article>
 
 
 
@@ -93,6 +102,15 @@
         </div>
 
         
+    <div id="requestCallback" class="modal">
+        <span class="modal-closer" data-modal-target="#requestCallback">X</span>
+        <div id="ff-compose"></div>
+        <script async defer src="https://formfacade.com/include/115509109870889804738/form/1FAIpQLSejyGhRnPQ6eVZ0bbyaGxPUKvSpqjLK1jKtzuouqEuC-zcNdA/classic.js?div=ff-compose"></script>
+    </div>
+
+    <script src="scripts/modals.js"></script>
+
+
 
     </body>
 
