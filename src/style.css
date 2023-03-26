@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 body,
 html {
     width: 100%;
@@ -8,7 +10,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    font-family: 'Courier New';
+    font-family: 'Tenor Sans', sans-serif;
     background-color: var(--green);
     background: linear-gradient(90deg, rgba(0,116,84,1) 0%, rgba(0,149,100,1) 45%, rgba(0,140,73,1) 100%);
     position: relative;
@@ -63,6 +65,7 @@ body {
 }
 #siteTitle {
     font-size: 2rem;
+    line-height: 110%;
     text-align: center;
 }
 h1 {
@@ -127,9 +130,6 @@ header {
     margin: auto;
     display: block;
 }
-#heroImg {
-    display: none;
-}
 .container {
     min-width: 360px;
     max-width: 1450px;
@@ -175,17 +175,16 @@ nav a {
     background-color: #26563d;
     border-radius: 0.5rem;
     height: 100%;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.3rem;
+    padding: 0.5rem;
     margin: 0.2rem;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 button:hover, nav a:hover {
     background-color: #36664d!important;
