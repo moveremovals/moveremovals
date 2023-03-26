@@ -249,26 +249,10 @@ footer {
 footer a:hover {
     color: var(--green);
 }
-
-/* Form Facade tweaks */
-#ff-compose {
-    width: 500px;
-    max-width: calc(100% - 2rem);
+iframe {
+    margin: auto;
+    display: block;
 }
-.ff-success {
-    font-weight: bold;
-    height: auto!important;
-    text-align: center;
-    width: 100%;
-}
-.ff-description div:last-of-type {
-    display: none!important;
-}
-.ff-button-bar .ff-powered-img {
-    opacity: 0;
-}
-
-
 @media only screen and (max-width: 850px) {
     #menuToggle:checked ~ nav {
         height: 400px;

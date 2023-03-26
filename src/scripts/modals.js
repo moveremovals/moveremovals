@@ -3,7 +3,6 @@ const modal = {
     init: () => {
         modal.initOpeners()
         modal.initClosers()
-        modal.initFfListeners()
     },
 
     initOpeners: () => document.querySelectorAll('.modal-btn').forEach(
@@ -24,31 +23,16 @@ const modal = {
         () => modal.closeModal(modalTarget)
     ),
 
-    initFfListeners: () => {
-        const ffForm = document.getElementById('ff-compose')
-        const observer = new MutationObserver(() => {
-            let ffSuccess = document.getElementById('ff-success')
-
-            if (ffSuccess) {
-                let dismissFFBtn = document.createElement('button')
-                dismissFFBtn.dataset.modalTarget = window.activeModalId
-                dismissFFBtn.classList.add('modal-closer-btn')
-                dismissFFBtn.innerText = 'Dismiss'
-                modal.addBtnCloserListener(dismissFFBtn, window.activeModalId)
-                ffSuccess.parentElement.appendChild(dismissFFBtn)
-            }
-        })
-        observer.observe(ffForm, {childList: true})
-    },
-
     showModal: (modalId) => {
         document.querySelector(modalId).classList.add('show')
         window.activeModalId = modalId
+        window.scrollTo(0, 0)
     },
 
     closeModal: (modalId) => {
         document.querySelector(modalId).classList.remove('show')
         delete window.activeModalId
+        window.scrollTo(0, 0)
     }
 
 }

@@ -12,7 +12,7 @@
     display: flex;
 }
 .modal > * {
-    margin: auto;
+    margin: 0 auto;
 }
 .modal-closer {
     position: absolute;
