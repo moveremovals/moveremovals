@@ -43,13 +43,11 @@ const modal = {
 
     showModal: (modalId) => {
         document.querySelector(modalId).classList.add('show')
-        document.body.classList.add('modal-showing')
         window.activeModalId = modalId
     },
 
     closeModal: (modalId) => {
         document.querySelector(modalId).classList.remove('show')
-        document.body.classList.remove('modal-showing')
         delete window.activeModalId
     }
 

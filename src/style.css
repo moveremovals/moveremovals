@@ -7,6 +7,12 @@ html {
 html {
     box-sizing: border-box;
 }
+body {
+    font-family: 'Courier New';
+    background-color: var(--green);
+    background: linear-gradient(90deg, rgba(0,116,84,1) 0%, rgba(0,149,100,1) 45%, rgba(0,140,73,1) 100%);
+    position: relative;
+}
 *,
 :after,
 :before {
@@ -18,11 +24,6 @@ html {
     --dark: rgb(16, 16, 16);
     --light: #FFFFFF;
     --green: rgb(0,116,84);
-}
-body {
-    font-family: 'Courier New';
-    background-color: var(--green);
-    background: linear-gradient(90deg, rgba(0,116,84,1) 0%, rgba(0,149,100,1) 45%, rgba(0,140,73,1) 100%);
 }
 .flex-row {
     display: flex;
@@ -253,7 +254,6 @@ footer a:hover {
 /* Form Facade tweaks */
 #ff-compose {
     width: 500px;
-    padding-top: 1rem;
     max-width: calc(100% - 2rem);
 }
 .ff-success {
