@@ -2,24 +2,57 @@
 
 {{#*inline "page-head"}}
 
-    <link rel="stylesheet" href="styleHero.css?v={{ version }}">
     <link rel="stylesheet" href="modals.css?v={{ version }}">
 
 {{/inline}}
 
 {{#*inline "main-block"}}
 
-    <div id="heroSpace">
-        {{> picture id="heroImg" title="Move Removals" alt="A smart looking van moves efficiently from left to right" file="/images/van" ext="jpg" type="jpeg" }}
+    <div id="heroSpace" class="card">
+        {{> picture title="Move Removals" alt="A smart looking van moves efficiently from left to right" file="/images/van" ext="jpg" type="jpeg" }}
 
-        <div id="heroBtnWrapperOuter">
-            <div id="heroBtnWrapperInner">
-                <button id="heroBtn" class="modal-btn" data-modal-target="#quickQuoteModal">GET A QUICK QUOTE</button>
+        <div class="card-band">
+            <div class="card-band-inner">
+                <button class="modal-btn" data-modal-target="#quickQuoteModal">GET A QUICK QUOTE</button>
             </div>
         </div>
     </div>
 
-    <article class="w-100 mb-auto mt-1">
+    <div class="flex-row card-rack mt-1">
+
+        <a class="card" href="ResidentialMove" title="Residential Move">
+            {{> picture title="Move Removals" alt="A hand packs books into a brown cardboard box ready for moving" file="/images/box_books" ext="jpg" type="jpeg" }}
+
+            <div class="card-band">
+                <div class="card-band-inner">
+                    <span class="card-title">Residential Move</span>
+                </div>
+            </div>
+        </a>
+
+        <a class="card" href="CommercialMove" title="Commercial Move">
+            {{> picture title="Move Removals" alt="Two men prepare a box for moving" file="/images/two_men_box" ext="jpg" type="jpeg" }}
+
+            <div class="card-band">
+                <div class="card-band-inner">
+                    <span class="card-title">Commercial Move</span>
+                </div>
+            </div>
+        </a>
+
+        <a class="card" href="PackWrapDismantling" title="Packing/Dismantling">
+            {{> picture title="Move Removals" alt="A hand tapes up a box ready for moving" file="/images/box_taping" ext="jpg" type="jpeg" }}
+
+            <div class="card-band">
+                <div class="card-band-inner">
+                    <span class="card-title">Packing/Dismantling</span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <article class="w-100 mb-auto mt-2">
 
         <h2 class="fc-primary">{{> tbo }} Move Removals {{> tbc }}</h2>
 
