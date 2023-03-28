@@ -228,15 +228,15 @@ picture img {
 }
 #areaList {
     display: flex;
-    justify-content: start;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    max-width: 400px;
     margin: auto;
     padding: 0px;
 }
 #areaList li {
     display: block;
-    width: 50%;
+    min-width: calc(100% / 3 + 1rem);
+    margin-bottom: 1rem;
 }
 #areaList li img {
     width: 0.9rem;
@@ -399,6 +399,9 @@ iframe {
         height: auto;
         width: calc(100% / 3 - 1rem);
         margin: 0;
+    }
+    #areaList li {
+        min-width: calc(100% / 4 + 1rem);
     }
 }
 
