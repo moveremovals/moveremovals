@@ -2,8 +2,28 @@
 
 {{#*inline "main-block"}}
 
-Storage
+    <div id="heroSpace" class="card">
+        {{> picture title="Move Removals" alt="A box is prepared for storage" file="/images/storage_units" ext="jpg" type="jpeg" }}
 
+        <div class="card-band">
+            <div class="card-band-inner">
+                <button class="modal-btn" data-modal-target="#quickQuoteModal">GET A QUICK QUOTE</button>
+            </div>
+        </div>
+    </div>
+
+    <article class="w-100 mb-auto mt-2">
+
+        <h2 class="fc-primary">{{> tbo }} Storage {{> tbc }}</h2>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae cumque error accusamus obcaecati quis voluptatem sed culpa? Explicabo quas porro facilis ipsum architecto soluta eum, mollitia deleniti consequuntur ex neque.</p>
+
+    </article>
+
+{{/inline}}
+
+{{#*inline "body-end"}}
+     {{> quickQuoteModal}}
 {{/inline}}
 
 {{/base}}

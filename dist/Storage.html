@@ -10,7 +10,10 @@
         <meta name="description" content="Move Removals">
         <title>Move Removals - Storage</title>
 
-        <link rel="stylesheet" href="style.css?v=1680027786097">
+        <link rel="stylesheet" href="style.css?v=1680029049773">
+        <link rel="stylesheet" href="modals.css?v=1680029049773">
+
+        <script defer src="scripts/modals.js"></script>
 
         
 
@@ -61,7 +64,26 @@
             <main class="p-1 fc-light container mx-auto w-100 flex-grow flex-row flex-wrap justify-space-between lg-justify-center">
 
                 
-Storage
+    <div id="heroSpace" class="card">
+        <picture >
+            <source srcset="/images/storage_units.webp" type="image/webp">
+            <source srcset="/images/storage_units.jpg" type="image/jpeg">
+            <img title="Move Removals" src="/images/storage_units.jpg" loading="lazy" alt="A box is prepared for storage">
+        </picture>
+        <div class="card-band">
+            <div class="card-band-inner">
+                <button class="modal-btn" data-modal-target="#quickQuoteModal">GET A QUICK QUOTE</button>
+            </div>
+        </div>
+    </div>
+
+    <article class="w-100 mb-auto mt-2">
+
+        <h2 class="fc-primary"><span class="text-bracket" aria-hidden="true">&raquo;</span> Storage <span class="text-bracket" aria-hidden="true">&raquo;</span></h2>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae cumque error accusamus obcaecati quis voluptatem sed culpa? Explicabo quas porro facilis ipsum architecto soluta eum, mollitia deleniti consequuntur ex neque.</p>
+
+    </article>
 
 
 
@@ -75,7 +97,10 @@ Storage
 
         </div>
 
-        
+             <div id="quickQuoteModal" class="modal">
+         <span class="modal-closer">X</span>
+         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerxT6JvezhgzFHgOw-0ModTjtbOyWp0u9YdqfRrgKg_CsMeA/viewform?embedded=true" width="640" height="2400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+     </div>
 
     </body>
 

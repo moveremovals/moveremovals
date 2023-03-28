@@ -1,11 +1,5 @@
 {{#> base title="About" currentPath="/"}}
 
-{{#*inline "page-head"}}
-
-    <link rel="stylesheet" href="modals.css?v={{ version }}">
-
-{{/inline}}
-
 {{#*inline "main-block"}}
 
     <div id="heroSpace" class="card">
@@ -81,12 +75,7 @@
 {{/inline}}
 
 {{#*inline "body-end"}}
-    <div id="quickQuoteModal" class="modal">
-        <span class="modal-closer">X</span>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerxT6JvezhgzFHgOw-0ModTjtbOyWp0u9YdqfRrgKg_CsMeA/viewform?embedded=true" width="640" height="2400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-
-    <script src="scripts/modals.js"></script>
+     {{> quickQuoteModal}}
 {{/inline}}
 
 {{/base}}
