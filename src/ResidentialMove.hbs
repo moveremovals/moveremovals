@@ -12,6 +12,41 @@
         </div>
     </div>
 
+    <div class="flex-row flex-wrap w-100 mb-auto">
+
+        <article class="two-thirds mt-1">
+
+            <h2 class="fc-primary">{{> tbo }} Residential Move {{> tbc }}</h2>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae cumque error accusamus obcaecati quis voluptatem sed culpa? Explicabo quas porro facilis ipsum architecto soluta eum, mollitia deleniti consequuntur ex neque.</p>
+
+            <p>From a student move to a large family home relocation, we have the team and the know how to complete your move in the most stress free way. Whether you have a single item, an apartment, or a stately home, we can facilitate your move.</p>
+
+        </article>
+
+        <div class="card modal-btn h-100 card-inset mt-1" href="ResidentialMove" title="Residential Move">
+            {{> picture title="Student Move" alt="A student packs ready for moving" file="/images/student_box" ext="jpg" type="jpeg" }}
+
+            <div class="card-band">
+                <div class="card-band-inner">
+                    <button class="modal-btn" data-modal-target="#studentMoveQuoteModal">STUDENT MOVE QUOTE</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{{/inline}}
+
+{{#*inline "body-end"}}
+
+    <div id="studentMoveQuoteModal" class="modal">
+        <span class="modal-closer">X</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5mr-5B7PrGxp0QDK_9qJf-WmRXkDIPxOCe3UmxVb9gI1sWw/viewform?embedded=true" width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+    <script src="scripts/modals.js"></script>
+
 {{/inline}}
 
 {{/base}}
