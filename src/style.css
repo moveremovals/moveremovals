@@ -257,19 +257,21 @@ iframe {
 #heroSpace {
     width: 100%;
     position: relative;
-    height: fit-content;
+    max-height: 180px;
+    display: flex;
+    align-items: center;
 }
 .card {
+    border-radius: 1rem;
     position: relative;
     display: block;
     margin: auto;
+    overflow: hidden;
 }
 .card .card-title {
     font-size: 1.5rem;
 }
 .card img {
-    border-radius: 1rem;
-    max-height: 350px;
     object-fit: cover;
 }
 .card .card-band {
@@ -306,7 +308,7 @@ iframe {
 }
 .card-rack .card {
     width: 100%;
-    height: 200px;
+    height: 120px;
 }
 .card-rack .card img {
     height: 100%;
@@ -397,11 +399,15 @@ iframe {
     }
     .card-rack .card {
         height: auto;
+        max-height: 200px;
         width: calc(100% / 3 - 1rem);
         margin: 0;
     }
     #areaList li {
         min-width: calc(100% / 4 + 1rem);
+    }
+    #heroSpace {
+        max-height: 300px;
     }
 }
 
