@@ -11,7 +11,7 @@ const modal = {
     ),
 
     initClosers: () => document.querySelectorAll('.modal-closer').forEach(
-        btn => modal.addBtnCloserListener(btn, btn.dataset.modalTarget)
+        btn => modal.addBtnCloserListener(btn, btn.parentElement)
     ),
 
     initFrameWatchers: () => document.querySelectorAll('iframe').forEach(
@@ -22,7 +22,7 @@ const modal = {
 
     addBtnOpenerListener: (btn, modalTarget) => btn.addEventListener(
         'click',
-        () => modal.showModal(modalTarget)
+        () => modal.showModal(document.querySelector(modalTarget))
     ),
 
     addBtnCloserListener: (btn, modalTarget) => btn.addEventListener(
@@ -30,14 +30,14 @@ const modal = {
         () => modal.closeModal(modalTarget)
     ),
 
-    showModal: modalId => {
-        document.querySelector(modalId).classList.add('show')
-        window.activeModalId = modalId
+    showModal: modal => {
+        modal.classList.add('show')
+        window.activeModalId = modal.id
         window.scrollTo(0, 0)
     },
 
-    closeModal: modalId => {
-        document.querySelector(modalId).classList.remove('show')
+    closeModal: modal => {
+        modal.classList.remove('show')
         delete window.activeModalId
         window.scrollTo(0, 0)
     }
