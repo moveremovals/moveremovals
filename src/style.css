@@ -67,6 +67,7 @@ body {
     font-size: 2rem;
     line-height: 110%;
     text-align: center;
+    text-shadow: 4px 4px 4px black;
 }
 h1 {
     font-size: 1.2rem;
