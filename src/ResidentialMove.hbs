@@ -3,13 +3,8 @@
 {{#*inline "main-block"}}
 
     <div id="heroSpace" class="card">
-        {{> picture id="heroImg" title="Move Removals" alt="A smart looking van moves efficiently from left to right" file="/images/box_books" ext="jpg" type="jpeg" }}
-
-        <div class="card-band">
-            <div class="card-band-inner">
-                <h1>Residential Move</h1>
-            </div>
-        </div>
+        {{> picture id="heroImg" title="Move Removals Residential Moves" alt="A smart looking van moves efficiently from left to right" file="/images/box_books" ext="jpg" type="jpeg" }}
+        {{> quickQuoteCardBanner }}
     </div>
 
     <div class="flex-row flex-wrap w-100 mb-auto">
@@ -24,7 +19,7 @@
 
         </article>
 
-        <div class="card modal-btn h-100 card-inset mt-1" href="ResidentialMove" title="Residential Move">
+        <div class="card modal-btn h-100 card-inset mt-1">
             {{> picture title="Student Move" alt="A student packs ready for moving" file="/images/student_box" ext="jpg" type="jpeg" }}
 
             <div class="card-band">
@@ -45,7 +40,7 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5mr-5B7PrGxp0QDK_9qJf-WmRXkDIPxOCe3UmxVb9gI1sWw/viewform?embedded=true" width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 
-    <script src="scripts/modals.js"></script>
+    {{> quickQuoteModal}}
 
 {{/inline}}
 

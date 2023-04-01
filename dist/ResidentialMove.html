@@ -10,8 +10,8 @@
         <meta name="description" content="Move Removals">
         <title>Move Removals - Residential Move</title>
 
-        <link rel="stylesheet" href="style.css?v=1680072416431">
-        <link rel="stylesheet" href="modals.css?v=1680072416431">
+        <link rel="stylesheet" href="style.css?v=1680367103190">
+        <link defer rel="stylesheet" href="modals.css?v=1680367103190">
 
         <script defer src="scripts/modals.js"></script>
 
@@ -28,12 +28,12 @@
                 <div class="flex-row flex-wrap justify-space-between">
                     <a id="siteTitle" class="w-100 md-w-auto px-2 mt-1 mb-1" href="/" title="Move Removals">MOVE<br/>REMOVALS</a>
             
-                    <div class="w-100 md-w-auto flex-row flex-wrap center mb-1">
-                        <a class="px-2" href="tel:01613303300">
+                    <div class="w-100 md-w-auto flex-row flex-wrap center mb-1 mt-auto fit-content">
+                        <a class="px-2 py-1" href="tel:01613303300">
                             <span class="fc-primary">&#8481;&nbsp;</span>0161 330 3300
                         </a>
                         <br/>
-                        <a class="px-2" href="mailto:enquiries@moveremovals.co.uk">
+                        <a class="px-2 py-1" href="mailto:enquiries@moveremovals.co.uk">
                             <span class="fc-primary">@&nbsp;</span>enquiries@moveremovals.co.uk
                         </a>
                     </div>
@@ -68,14 +68,12 @@
         <picture  id="heroImg" >
             <source srcset="/images/box_books.webp" type="image/webp">
             <source srcset="/images/box_books.jpg" type="image/jpeg">
-            <img title="Move Removals" src="/images/box_books.jpg" loading="lazy" alt="A smart looking van moves efficiently from left to right">
-        </picture>
-        <div class="card-band">
+            <img title="Move Removals Residential Moves" src="/images/box_books.jpg" loading="lazy" alt="A smart looking van moves efficiently from left to right">
+        </picture>        <div class="card-band">
             <div class="card-band-inner">
-                <h1>Residential Move</h1>
+                <button class="modal-btn" data-modal-target="#quickQuoteModal">GET A QUICK QUOTE</button>
             </div>
-        </div>
-    </div>
+        </div>    </div>
 
     <div class="flex-row flex-wrap w-100 mb-auto">
 
@@ -89,7 +87,7 @@
 
         </article>
 
-        <div class="card modal-btn h-100 card-inset mt-1" href="ResidentialMove" title="Residential Move">
+        <div class="card modal-btn h-100 card-inset mt-1">
             <picture >
                 <source srcset="/images/student_box.webp" type="image/webp">
                 <source srcset="/images/student_box.jpg" type="image/jpeg">
@@ -122,8 +120,10 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5mr-5B7PrGxp0QDK_9qJf-WmRXkDIPxOCe3UmxVb9gI1sWw/viewform?embedded=true" width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 
-    <script src="scripts/modals.js"></script>
-
+    <div id="quickQuoteModal" class="modal">
+        <span class="modal-closer">X</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerxT6JvezhgzFHgOw-0ModTjtbOyWp0u9YdqfRrgKg_CsMeA/viewform?embedded=true" width="640" height="2600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
 
 
     </body>

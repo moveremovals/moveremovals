@@ -85,6 +85,7 @@ h3 {
 .two-thirds {
     width: 100%;
     display: block;
+    margin-right: auto;
 }
 .card {
     border-radius: 1rem;
@@ -97,6 +98,7 @@ h3 {
     max-height: 300px;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 .card .card-title {
     font-size: 1.5rem;
@@ -121,6 +123,9 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.card .card-band-inner a {
+    width: 100%;
 }
 .card .card-band-inner button {
     padding: 1rem;
@@ -173,6 +178,10 @@ h3 {
     padding-left: 2rem;
     padding-right: 2rem;
 }
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 .m-auto {
     margin: auto;
 }
@@ -186,6 +195,9 @@ h3 {
 .mt-2 {
     margin-top: 2rem;
 }
+.mt-auto {
+    margin-top: auto;
+}
 .mb-1 {
     margin-bottom: 1rem;
 }
@@ -194,6 +206,9 @@ h3 {
 }
 .ml-1 {
     margin-left: 1rem;
+}
+.fit-content {
+    height: fit-content;
 }
 header {
     align-items: center;
@@ -218,7 +233,10 @@ header {
     justify-content: space-between;
 }
 a {
-    display: inline-block;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
     color: #FFF;
     text-decoration: none;
     font-weight: bold;
@@ -265,6 +283,7 @@ button:hover, nav a:hover {
 }
 button:hover, a:hover {
     color: var(--dark)!important;
+    background-color: #FFF3;
 }
 nav a.active {
     color: var(--primary);
@@ -422,11 +441,14 @@ iframe {
         max-height: 300px;
     }
     .two-thirds {
-        max-width: calc(100% * 2 / 3 - 1rem);
+        max-width: calc(100% * 2 / 3 - 0.5rem);
     }
     .card-inset {
-        max-width: calc(100% * 1 / 3 - 1rem);
-        max-height: none;
+        max-width: calc(100% * 1 / 3 - 0.5rem);
+        height: auto;
+    }
+    .card-inset picture img {
+
     }
 }
 

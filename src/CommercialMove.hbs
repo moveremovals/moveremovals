@@ -3,14 +3,39 @@
 {{#*inline "main-block"}}
 
     <div id="heroSpace" class="card">
-        {{> picture title="Move Removals" alt="Two men prepare a box for moving" file="/images/two_men_box" ext="jpg" type="jpeg" }}
+        {{> picture title="Move Removals Commercial Moves" alt="Two men prepare a box for moving" file="/images/two_men_box" ext="jpg" type="jpeg" }}
+        {{> quickQuoteCardBanner }}
+    </div>
 
-        <div class="card-band">
-            <div class="card-band-inner">
-                <h1>Commercial Move</h1>
+    <div class="flex-row flex-wrap w-100 mb-auto">
+
+        <article class="mt-1 two-thirds">
+
+            <h2 class="fc-primary">{{> tbo }} Residential Move {{> tbc }}</h2>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae cumque error accusamus obcaecati quis voluptatem sed culpa? Explicabo quas porro facilis ipsum architecto soluta eum, mollitia deleniti consequuntur ex neque.</p>
+
+            <p>From a student move to a large family home relocation, we have the team and the know how to complete your move in the most stress free way. Whether you have a single item, an apartment, or a stately home, we can facilitate your move.</p>
+
+        </article>
+
+        <div class="card modal-btn h-100 card-inset mt-1">
+            {{> picture title="Storage Services" alt="A smart looking storage facility" file="/images/storage_units" ext="jpg" type="jpeg" }}
+
+            <div class="card-band">
+                <div class="card-band-inner">
+                    <a class="modal-btn" href="storage">STORAGE SERVICES</a>
+                </div>
             </div>
         </div>
+
     </div>
+
+{{/inline}}
+
+{{#*inline "body-end"}}
+
+    {{> quickQuoteModal}}
 
 {{/inline}}
 
