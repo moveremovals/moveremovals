@@ -340,6 +340,7 @@ picture, picture img {
 footer {
     background-color: var(--dark);
     text-align: center;
+    color: var(--light);
 }
 footer a:hover {
     color: var(--green);
