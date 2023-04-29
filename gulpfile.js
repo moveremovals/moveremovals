@@ -22,6 +22,7 @@ const html = done =>
                 {
                     version: Date.now(),
                     siteName: 'Move Removals',
+                    loading: 'lazy',
                     navItems: {
                         '/': 'Home',
                         '/ResidentialMove': 'Residential Move',
