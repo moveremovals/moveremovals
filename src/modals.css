@@ -14,14 +14,22 @@
 .modal > * {
     margin: 0 auto;
 }
-.modal-closer {
+.modal-header {
     position: absolute;
-    right: 2rem;
     top: 2rem;
+    width: 100%;
+}
+.modal-closer {
+    text-align: right;
+    width: 100%;
+    display: block;
+    margin: auto;
+    max-width: 700px;
     font-size: 2rem;
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
+    padding-right: 2rem;
 }
 .modal-closer-btn {
     margin: auto;

@@ -11,7 +11,7 @@ const modal = {
     ),
 
     initClosers: () => document.querySelectorAll('.modal-closer').forEach(
-        btn => modal.addBtnCloserListener(btn, btn.parentElement)
+        btn => modal.addBtnCloserListener(btn, btn.parentElement.parentElement)
     ),
 
     initFrameWatchers: () => document.querySelectorAll('iframe').forEach(
