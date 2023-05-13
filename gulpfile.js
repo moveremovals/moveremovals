@@ -3,16 +3,17 @@ const handlebars = require('gulp-compile-handlebars')
 const rename = require('gulp-rename')
 const webp = require('gulp-webp')
 const cleanCSS = require('gulp-clean-css');
+const destDir = 'docs'
 
 const imgWebp = done =>
     gulp.src(['src/images/*.jpg', 'src/images/*.png'])
     .pipe(webp())
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest(destDir + '/images'))
     .on('end', done)
 
 const img = done =>
     gulp.src(['src/images/*.jpg', 'src/images/*.png'])
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest(destDir + '/images'))
     .on('end', done)
 
 const html = done =>
@@ -42,7 +43,7 @@ const html = done =>
             )
         )
     .pipe(rename({extname: '.html'}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(destDir))
     .on('end', done)
 
 const css = done =>
@@ -51,12 +52,12 @@ const css = done =>
         console.log(`${details.name}: ${details.stats.originalSize}`)
         console.log(`${details.name}: ${details.stats.minifiedSize}`)
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(destDir))
     .on('end', done)
 
 const scripts = done =>
     gulp.src(['src/scripts/*.js'])
-    .pipe(gulp.dest('dist/scripts'))
+    .pipe(gulp.dest(destDir + '/scripts'))
 
 const watchHbs = done => gulp.watch(['src/*.hbs', 'src/**/*.hbs'], html)
 
