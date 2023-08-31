@@ -12,7 +12,7 @@ const imgWebp = done =>
     .on('end', done)
 
 const img = done =>
-    gulp.src(['src/images/*.jpg', 'src/images/*.png'])
+    gulp.src(['src/images/*.jpg', 'src/images/*.png', 'src/images/*.svg'])
     .pipe(gulp.dest(destDir + '/images'))
     .on('end', done)
 
