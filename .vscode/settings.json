@@ -1,5 +1,6 @@
 {
     "liveServer.settings.port": 5501,
-    "liveServer.settings.root": "dist",
-    "liveServer.settings.useWebExt": false
+    "liveServer.settings.root": "docs",
+    "liveServer.settings.useWebExt": false,
+    "liveServer.settings.multiRootWorkspaceName": "moveremovals"
 }

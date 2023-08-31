@@ -85,7 +85,6 @@ h3 {
 }
 .two-thirds {
     width: 100%;
-    display: block;
     margin-right: auto;
 }
 .card {
@@ -312,7 +311,7 @@ main article {
     border-radius: 1rem;
 }
 p {
-    margin: 0.5rem;
+    margin: 1rem 0.5rem;
 }
 #logoLarge {
     display: none;
