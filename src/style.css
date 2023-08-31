@@ -321,15 +321,16 @@ picture, picture img {
     height: 100%;
 }
 #areaList {
+    max-width: 400px;
+    margin: auto;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: auto;
     padding: 0px;
 }
 #areaList li {
-    display: block;
-    min-width: calc(100% / 3 + 1rem);
+    display: inline-block;
+    width: 50%;
     margin-bottom: 1rem;
 }
 #areaList li img {
@@ -435,9 +436,6 @@ iframe {
         max-height: 200px;
         width: calc(100% / 3 - 1rem);
         margin: 0;
-    }
-    #areaList li {
-        min-width: calc(100% / 4 + 1rem);
     }
     #heroSpace {
         max-height: 300px;
