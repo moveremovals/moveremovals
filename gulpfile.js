@@ -24,6 +24,8 @@ const html = done =>
                     version: Date.now(),
                     siteName: 'Move Removals',
                     loading: 'lazy',
+                    phoneNumber: '07540894348',
+                    email: 'enquiries@move-removals.co.uk',
                     navItems: {
                         '/': 'Home',
                         '/ResidentialMove': 'Residential Move',
